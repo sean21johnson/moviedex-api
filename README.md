@@ -1,6 +1,6 @@
 MOVIEDEX API
 
-Server-side project that returns an array of movies from a database based on specific query parameters in the URL.
+Server-side application that returns an array of movies from a database based on specific query parameters in the URL.
 
 In this application, a user can:
 
