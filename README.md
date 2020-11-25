@@ -7,7 +7,7 @@ In this application, a user can:
 	-View all of the movies in the database.
 	-Search for movies based on genre, country, and/or average vote score.
 	-Use query parameters "searchGenre", "searchCountry", and "searchAverageScore" to specify exactly the type of movie they are looking for.
-	-Only get a valid list of movies if they have valid Authorization with a Bearer API token value.
+	-Only get a valid of movies if they have valid Authorization with a Bearer API token value.
 
 I utilized the below in creating this back-end application:
 
