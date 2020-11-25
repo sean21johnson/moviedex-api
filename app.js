@@ -25,23 +25,32 @@ app.use(function validateBearerToken(req, res, next) {
 function handleGetMovies(req, res) {
     let movieList = movies;
 
-    const {searchGenre = "", searchCountry = "", searchAverageVote = 0} = req.query;
+    const {genre, country, avg_vote} = req.query;
+    
+    if(genre) {
+        movieList = movieList.filter(movie =>
+            movie.
+                genre.
+                toLowerCase()
+                .includes(genre.toLowerCase())
+        )
+    }
 
-    movieList = movieList.filter(movie =>
-        movie.
-            genre.
-            toLowerCase()
-            .includes(searchGenre.toLowerCase()))
-
-    movieList = movieList.filter(movie => 
-        movie.
-            country.
-            toLowerCase()
-            .includes(searchCountry.toLowerCase()))
-
-    movieList = movieList.filter(movie => 
-        movie.avg_vote >= searchAverageVote
-    )
+    if(country) {
+        movieList = movieList.filter(movie => 
+            movie.
+                country.
+                toLowerCase()
+                .includes(country.toLowerCase())
+        )
+    }
+    
+    
+    if(avg_vote) {
+        movieList = movieList.filter(movie => 
+            Number(movie.avg_vote) >= Number(avg_vote)
+        )
+    }
     
 
     res.json(movieList)
