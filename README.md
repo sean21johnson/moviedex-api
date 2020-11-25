@@ -11,5 +11,7 @@ In this application, a user can:
 
 I utilized the below in creating this back-end application:
 
--
+	-Express
+	-Response & Request Messaging
+	-CORS support
 	
